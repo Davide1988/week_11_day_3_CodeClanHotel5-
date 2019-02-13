@@ -13,6 +13,8 @@ public class BookingTest {
 
         booking = new Booking(bedRoom1, 2, 2);
 
+        bedRoom1 = new BedRoom(2, 2, "double", 20, true);
+
     }
 
 
@@ -30,5 +32,6 @@ public class BookingTest {
     public void canGetNoOfClients(){
         assertEquals(2, booking.getNoOfClients());
     }
+
 
 }

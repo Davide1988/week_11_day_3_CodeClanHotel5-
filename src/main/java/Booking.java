@@ -23,4 +23,10 @@ public class Booking {
         return this.noOfClients;
     }
 
+    public void bookRoom(BedRoom bedRoom){
+        bedRoom.setAvailability(false);
+    }
+
+
+
 }

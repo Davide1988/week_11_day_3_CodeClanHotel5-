@@ -29,7 +29,20 @@ public class Hotel {
         bedRoom.clearRoom();
     }
 
+    public Booking bookRoom(BedRoom bedRoom, int number, int number_of_night){
+        bedRoom.setAvailability(false);
+        Booking booking = new Booking(bedRoom, number, number_of_night);
+        return booking;
+    }
+
+    public double getBill(Booking booking){
+        BedRoom bedRoom = booking.getBedroom();
+        int non = booking.getNoOfNights();
+        double rate = bedRoom.getRate();
+        double total = non * rate;
+        return total;
 
 
+    }
 
 }

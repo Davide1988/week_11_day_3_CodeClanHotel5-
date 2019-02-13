@@ -13,6 +13,7 @@ public class HotelTest {
     private Client client1;
     private Client client2;
     private Client client3;
+    private Booking newbooking;
 
     @Before
     public void before(){
@@ -56,6 +57,17 @@ public class HotelTest {
         assertEquals(1, bedRoom1.clientCount());
         hotel.getCustomerOut(bedRoom1);
         assertEquals(0, bedRoom1.clientCount());
+    }
+
+    @Test
+    public void canBookARoom(){
+        hotel.bookRoom(bedRoom1, 2, 2);
+        assertEquals(false, bedRoom1.getAvailability());
+    }
+
+    @Test
+    public void canGetBill() {
+        assertEquals(120, hotel.getBill(hotel.bookRoom(bedRoom1, 2, 2)), 1);
     }
 
 

@@ -54,6 +54,10 @@ public class BedRoom {
         this.clients.clear();
     }
 
+    public void setAvailability(boolean status){
+        this.availability = status;
+    }
+
 
 //    public void addClient(Client client){
 //        if (this.availability){
