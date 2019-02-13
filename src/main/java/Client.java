@@ -18,5 +18,9 @@ public class Client {
         return this.wallet;
     }
 
+    public int getAge(){
+        return this.age;
+    }
+
 
 }
